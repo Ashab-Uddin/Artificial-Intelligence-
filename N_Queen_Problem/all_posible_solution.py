@@ -20,7 +20,7 @@ def is_safe(board, row, col, N):
     return True
 
 
-# 🔥 store all solutions here
+# store all solutions here
 solutions = []
 
 def solve(board, col, N):
