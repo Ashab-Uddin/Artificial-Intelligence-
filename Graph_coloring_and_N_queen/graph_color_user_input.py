@@ -26,6 +26,14 @@ def graphColorUtil(graph, m, color, v):
 def graphColoring(graph, m):
     V = len(graph)
     color = [0] * V
+    #color_names = ["Red", "Green", "Blue", "Yellow", "Orange"]
+    #color_names input from user
+    color_names = input("Enter color names: ").split()
+
+    #validation
+    if len(color_names)<m:
+        print("Not enough color name")
+        return
 
     result = graphColorUtil(graph, m, color, 0)
     if result == False:
@@ -35,7 +43,7 @@ def graphColoring(graph, m):
     print("Solution exists:")
     print("Assigned colors:")
     for i in range(V):
-        print(f"Vertex {i} → Color {color[i]}")
+        print(f"Vertex {i} → {color_names[color[i]-1]}")
 
 
 # Run
