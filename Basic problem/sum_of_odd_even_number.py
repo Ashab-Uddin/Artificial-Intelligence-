@@ -1,3 +1,4 @@
+#Writeapythonprogramtofindthesumofoddandevennumbersfromasetofnumbers.
 numbers =list(map(int, input("Enter the numbers:").split()))
 even_numbers = 0;
 odd_numbers = 0;
