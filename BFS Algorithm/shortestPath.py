@@ -30,6 +30,7 @@ def bfs_with_parent(grid, start, goal):
             if 0 <= nx < n and 0 <= ny < n:
                 # Check FREE cell (1)
                 if grid[nx][ny] == 1 and (nx, ny) not in visited:
+                    print(f"➡️ Moving -> ({nx}, {ny})")
                     queue.append((nx, ny))
                     visited.add((nx, ny))
                     parent[(nx, ny)] = (x, y)
