@@ -30,7 +30,7 @@ def dfs(graph, u, goal, N):
 
             # Goal check
             if vx == goal.x and vy == goal.y:
-                print("✅ Goal found")
+                print("Goal found")
                 print("Moves =", depth)
                 found = True
                 return
@@ -38,7 +38,7 @@ def dfs(graph, u, goal, N):
             # Recursive DFS call
             dfs(graph, Node(vx, vy, depth), goal, N)
 
-            # Stop যদি goal পাওয়া যায়
+           
             if found:
                 return
 

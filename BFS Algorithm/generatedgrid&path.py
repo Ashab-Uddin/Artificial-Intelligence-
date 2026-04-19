@@ -1,6 +1,10 @@
 import random
 from collections import deque
 
+# Create grid with random obstacles
+def create_grid(n):
+    return [[random.choice([1, 1, 1, 0]) for _ in range(n)] for _ in range(n)]
+
 def print_grid(grid):
     print("\nGenerated N x N Matrix:")
     for row in grid:
@@ -40,11 +44,7 @@ def bfs_with_moves(grid, start, goal):
 
 # MAIN
 n = int(input("Enter Grid Size N: "))
-grid = []
-print("Enter the grid value: ")
-for i in range(n):
-    row = list(map(int, input().split()))
-    grid.append(row)
+grid = create_grid(n)
 print_grid(grid)
 
 sx = int(input("Enter Start X: "))
