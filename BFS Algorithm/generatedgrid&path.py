@@ -1,10 +1,6 @@
 import random
 from collections import deque
 
-def create_grid(n):
-    # More free cells (1), fewer obstacles (0)
-    return [[random.choice([1, 1, 1, 0]) for _ in range(n)] for _ in range(n)]
-
 def print_grid(grid):
     print("\nGenerated N x N Matrix:")
     for row in grid:
@@ -35,7 +31,7 @@ def bfs_with_moves(grid, start, goal):
             if 0 <= nx < n and 0 <= ny < n:
                 # Check FREE cell (1)
                 if grid[nx][ny] == 1 and (nx, ny) not in visited:
-                    print(f"➡️ Moving {move} -> ({nx}, {ny})")
+                    print(f" Moving {move} -> ({nx}, {ny})")
                     queue.append((nx, ny))
                     visited.add((nx, ny))
 
@@ -44,7 +40,11 @@ def bfs_with_moves(grid, start, goal):
 
 # MAIN
 n = int(input("Enter Grid Size N: "))
-grid = create_grid(n)
+grid = []
+print("Enter the grid value: ")
+for i in range(n):
+    row = list(map(int, input().split()))
+    grid.append(row)
 print_grid(grid)
 
 sx = int(input("Enter Start X: "))
