@@ -21,7 +21,7 @@ def minimax(curDepth, nodeIndex, maxTurn, scores, targetDepth):
         )
 
 
-# ---------------- Driver Code ----------------
+
 
 n = int(input("Enter number of leaf nodes (power of 2): "))
 
